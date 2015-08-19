@@ -50,16 +50,19 @@
 	}
 
 	.sandwiches .sandwich .content {
-		/*background-color: grey;*/
 		display: flex;
 		flex-direction: column;
 	}
 
 	.sandwiches .sandwich .content .title {
-		background-color: green;
+		/*background-color: green;*/
 		line-height: 1.1;
 		font-size: 1em;
 		font-weight: 700;
+	}
+
+	.sandwiches .sandwich .content .title:first-letter {
+		text-transform: uppercase;
 	}
 
 	.sandwiches .sandwich .content .stuff {
@@ -69,7 +72,7 @@
 	}
 
 	.sandwiches .sandwich .content .stuff li {
-		background-color: red;
+		/*background-color: red;*/
 		width: auto;
 		font-weight: 400;
 		line-height: 1.1;
@@ -78,16 +81,15 @@
 
 	.sandwiches .sandwich .content .stuff li:not(:last-child):after {
 		content: ',';
-		margin-right: 3pt;
+		margin-right: 2pt;
 	}
 
 	.sandwiches .sandwich .price {
-		background-color: orange;
+		/*background-color: orange;*/
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
-		min-width: 3.5em;
-		width: 3.5em;
+		min-width: 2.25em;
 	}
 
 	.sandwiches .sandwich .price > * {
@@ -104,419 +106,560 @@
 <ul class="sandwiches white">
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">HotBull</span>
+		<div class="content"><span class="title">x Salada</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
 				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
 				<li>maionese</li>
-				<li>catchup</li>
-				<li>mostarda</li>
-				<li>batata Palha</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">9</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">Cachorro Quente Simples</span>
+		<div class="content"><span class="title">x Salada Egg's</span>
 			<ul class="stuff">
-				<li>pão</li>
-				<li>salsicha</li>
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
 				<li>maionese</li>
-				<li>catchup</li>
-				<li>mostarda</li>
-				<li>batata Palha</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">9</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">Cachorro Quente Completo</span>
-			<ul class="stuff">
-				<li>pão</li>
-				<li>duas salsichas</li>
-				<li>maionese</li>
-				<li>catchup</li>
-				<li>mostarda</li>
-				<li>batata Palha</li>
-				<li>bacon</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">HotBull</span>
-			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>maionese</li>
-				<li>catchup</li>
-				<li>mostarda</li>
-				<li>batata Palha</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">9</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">Cachorro Quente Simples</span>
-			<ul class="stuff">
-				<li>pão</li>
-				<li>salsicha</li>
-				<li>maionese</li>
-				<li>catchup</li>
-				<li>mostarda</li>
-				<li>batata Palha</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">9</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">Cachorro Quente Completo</span>
-			<ul class="stuff">
-				<li>pão</li>
-				<li>duas salsichas</li>
-				<li>maionese</li>
-				<li>catchup</li>
-				<li>mostarda</li>
-				<li>batata Palha</li>
-				<li>bacon</li>
-			</ul>
-		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
-	</li>
-
-	<li class="sandwich">
-		<div class="content">
-			<span class="title">Cachorro Quente Completo</span>
-			<ul class="stuff">
-				<li>pão</li>
-				<li>duas salsichas</li>
-				<li>maionese</li>
-				<li>catchup</li>
-				<li>mostarda</li>
-				<li>batata Palha</li>
-				<li>bacon</li>
-				<li>milho</li>
-				<li>cenoura</li>
-				<li>hamburguer</li>
 				<li>ovo</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Salada Bacon</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>bacon</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Salada Catupiry</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>catupiry</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Salada Calabresa</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>calabresa</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Burguer</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>mussarela</li>
+				<li>presunto</li>
+				<li>maionese</li>
+				<li>catupiry</li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Burguer Catupiry</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>mussarela</li>
+				<li>presunto</li>
+				<li>maionese</li>
+				<li>catupiry</li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Egg</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>ovo</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Egg Bacon</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>ovo</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>bacon</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Egg Catupiry</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>ovo</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>catupiry</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Bacon</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>bacon</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Bacon Egg</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>bacon</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>ovo</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Bacon Catupiry</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>bacon</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>catupiry</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Bacon Calabresa</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>bacon</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>calabresa</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Frango</span>
+			<ul class="stuff">
+				<li>filé de Frango</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Frango Bacon</span>
+			<ul class="stuff">
+				<li>filé de Frango</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Frango Egg</span>
+			<ul class="stuff">
+				<li>filé de Frango</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Frango Catupiry</span>
+			<ul class="stuff">
+				<li>filé de Frango</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Frango Calabresa</span>
+			<ul class="stuff">
+				<li>filé de Frango</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Frango Catupiry Bacon</span>
+			<ul class="stuff">
+				<li>filé de Frango</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Calabresa</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>calabresa</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Calabresa Bacon</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>calabresa</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+				<li>bacon</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Calabresa Egg</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>calabresa</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+				<li>ovo</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Calabresa Catupiry</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>calabresa</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+				<li>catupiry</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">x Tudo</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
+				<li>file de Frango</li>
+				<li>ovo</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+				<li>bacon</li>
+				<li>calabresa</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">americano</span>
+			<ul class="stuff">
+				<li>hamburguer</li>
+				<li>presunto</li>
+				<li>mussarela</li>
 				<li>carne</li>
+				<li>ovo</li>
+				<li>tomate</li>
+				<li>alface</li>
+				<li>maionese</li>
+				<li>milho</li>
+				<li>bacon</li>
+				<li>calabresa</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">misto Quente</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
+				<li>presunto</li>
 				<li>mussarela</li>
-				<li>alface</li>
-				<li>tomate</li>
+				<li>maionese</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">bauru de Presunto</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
+				<li>presunto</li>
 				<li>mussarela</li>
-				<li>alface</li>
 				<li>tomate</li>
+				<li>maionese</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">bauru de Carne</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
+				<li>carne</li>
+				<li>milho</li>
+				<li>maionese</li>
 				<li>mussarela</li>
-				<li>alface</li>
 				<li>tomate</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">bauru de Carne Bacon</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
+				<li>carne</li>
+				<li>milho</li>
+				<li>maionese</li>
 				<li>mussarela</li>
-				<li>alface</li>
 				<li>tomate</li>
+				<li>bacon</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">bauru de Carne Egg</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
+				<li>carne</li>
+				<li>milho</li>
+				<li>maionese</li>
 				<li>mussarela</li>
-				<li>alface</li>
 				<li>tomate</li>
+				<li>ovo</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">Cachorro Quente Simples</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
+				<li>salsicha</li>
 				<li>tomate</li>
+				<li>milho</li>
+				<li>maionese</li>
+				<li>catchup</li>
+				<li>mostarda</li>
+				<li>batata Palha</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">Cachorro Quente Completo</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
-				<li>mussarela</li>
-				<li>alface</li>
+				<li>salsicha</li>
 				<li>tomate</li>
+				<li>milho</li>
+				<li>maionese</li>
+				<li>catchup</li>
+				<li>mostarda</li>
+				<li>batata Palha</li>
+				<li>bacon</li>
+				<li>calabresa</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">Cachorrão</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
+				<li>pão de hamburguer</li>
+				<li>2 salsichas</li>
 				<li>mussarela</li>
-				<li>alface</li>
 				<li>tomate</li>
+				<li>milho</li>
+				<li>maionese</li>
+				<li>catchup</li>
+				<li>mostarda</li>
+				<li>batata palha</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content">
-			<span class="title">X-Salada</span>
+		<div class="content"><span class="title">Cachorrão Bacon</span>
 			<ul class="stuff">
-				<li>pão de Hamburguer</li>
-				<li>hamburguer</li>
+				<li>pão de hamburguer</li>
+				<li>2 salsichas</li>
 				<li>mussarela</li>
-				<li>alface</li>
 				<li>tomate</li>
+				<li>milho</li>
+				<li>maionese</li>
+				<li>catchup</li>
+				<li>mostarda</li>
+				<li>batata palha</li>
+				<li>bacon</li>
 			</ul>
 		</div>
-		<div class="price">
-			<span class="int">11</span><span class="decimal">00</span>
-		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
+
+	<li class="sandwich">
+		<div class="content"><span class="title">Cachorro Quente Especial</span>
+			<ul class="stuff">
+				<li>salsicha</li>
+				<li>hamburguer</li>
+				<li>tomate</li>
+				<li>milho</li>
+				<li>maionese</li>
+				<li>catchup</li>
+				<li>ovo</li>
+				<li>mostarda</li>
+				<li>batata Palha</li>
+			</ul>
+		</div>
+		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+	</li>
+
 
 </ul>
 
