@@ -36,33 +36,59 @@
 
 	.sandwiches .sandwich {
 		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
+		border-bottom: solid 2pt #eeeeee;
+		justify-content: flex-start;
+		flex-direction: column;
 		width: 33.333333333%;
 		padding: 0 .625em 1pt .375em;
 		margin-bottom: 2pt;
-		height: 3.75em;
+		min-height: 3.75em;
 	}
 
-	.sandwiches .sandwich .content,
-	.sandwiches .sandwich .price {
-		border-bottom: solid 2pt #eeeeee;
-	}
+	/* Sandwich Detail */
 
-	.sandwiches .sandwich .content {
+	.sandwiches .sandwich .detail {
 		display: flex;
-		flex-direction: column;
 	}
 
-	.sandwiches .sandwich .content .title {
+	.sandwiches .sandwich .detail .price {
+		/*background-color: orange;*/
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		min-width: 2.25em;
+	}
+
+	.sandwiches .sandwich .detail .price > * {
+		font-size: .875em;
+		width: auto;
+	}
+
+	.sandwiches .sandwich .detail .price .decimal:before {
+		content: ',';
+	}
+
+	.sandwiches .sandwich .detail .space {
+		width: 100%;
+	}
+
+	.sandwiches .sandwich .detail .title {
 		/*background-color: green;*/
 		line-height: 1.1;
 		font-size: 1em;
 		font-weight: 700;
+		white-space: nowrap;
 	}
 
-	.sandwiches .sandwich .content .title:first-letter {
+	.sandwiches .sandwich .detail .title:first-letter {
 		text-transform: uppercase;
+	}
+
+	/* Sandwich Content */
+
+	.sandwiches .sandwich .content {
+		display: flex;
+		flex-direction: column;
 	}
 
 	.sandwiches .sandwich .content .stuff {
@@ -84,29 +110,17 @@
 		margin-right: 2pt;
 	}
 
-	.sandwiches .sandwich .price {
-		/*background-color: orange;*/
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
-		min-width: 2.25em;
-	}
-
-	.sandwiches .sandwich .price > * {
-		font-size: .875em;
-		width: auto;
-	}
-
-	.sandwiches .sandwich .price .decimal:before {
-		content: ',';
-	}
-
 </style>
 
 <ul class="sandwiches white">
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Salada</span>
+		<div class="detail">
+			<span class="title">x Salada</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -116,11 +130,15 @@
 				<li>maionese</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Salada Egg's</span>
+		<div class="detail">
+			<span class="title">x Salada Egg's</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -131,11 +149,15 @@
 				<li>ovo</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Salada Bacon</span>
+		<div class="detail">
+			<span class="title">x Salada Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -146,11 +168,15 @@
 				<li>bacon</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Salada Catupiry</span>
+		<div class="detail">
+			<span class="title">x Salada Catupiry</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -161,11 +187,15 @@
 				<li>catupiry</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Salada Calabresa</span>
+		<div class="detail">
+			<span class="title">x Salada Calabresa</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -176,11 +206,15 @@
 				<li>calabresa</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Burguer</span>
+		<div class="detail">
+			<span class="title">x Burguer</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>mussarela</li>
@@ -190,11 +224,15 @@
 				<li></li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Burguer Catupiry</span>
+		<div class="detail">
+			<span class="title">x Burguer Catupiry</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>mussarela</li>
@@ -204,11 +242,15 @@
 				<li></li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Egg</span>
+		<div class="detail">
+			<span class="title">x Egg</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -219,11 +261,15 @@
 				<li>maionese</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Egg Bacon</span>
+		<div class="detail">
+			<span class="title">x Egg Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -235,11 +281,15 @@
 				<li>bacon</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Egg Catupiry</span>
+		<div class="detail">
+			<span class="title">x Egg Catupiry</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -251,11 +301,15 @@
 				<li>catupiry</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Bacon</span>
+		<div class="detail">
+			<span class="title">x Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -266,11 +320,15 @@
 				<li>maionese</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Bacon Egg</span>
+		<div class="detail">
+			<span class="title">x Bacon Egg</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -282,11 +340,15 @@
 				<li>ovo</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Bacon Catupiry</span>
+		<div class="detail">
+			<span class="title">x Bacon Catupiry</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -298,11 +360,15 @@
 				<li>catupiry</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Bacon Calabresa</span>
+		<div class="detail">
+			<span class="title">x Bacon Calabresa</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -314,11 +380,15 @@
 				<li>calabresa</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Frango</span>
+		<div class="detail">
+			<span class="title">x Frango</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>filé de Frango</li>
 				<li>presunto</li>
@@ -329,11 +399,15 @@
 				<li>milho</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Frango Bacon</span>
+		<div class="detail">
+			<span class="title">x Frango Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>filé de Frango</li>
 				<li>presunto</li>
@@ -344,11 +418,15 @@
 				<li>milho</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Frango Egg</span>
+		<div class="detail">
+			<span class="title">x Frango Egg</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>filé de Frango</li>
 				<li>presunto</li>
@@ -359,11 +437,15 @@
 				<li>milho</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Frango Catupiry</span>
+		<div class="detail">
+			<span class="title">x Frango Catupiry</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>filé de Frango</li>
 				<li>presunto</li>
@@ -374,11 +456,15 @@
 				<li>milho</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Frango Calabresa</span>
+		<div class="detail">
+			<span class="title">x Frango Calabresa</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>filé de Frango</li>
 				<li>presunto</li>
@@ -389,11 +475,15 @@
 				<li>milho</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Frango Catupiry Bacon</span>
+		<div class="detail">
+			<span class="title">x Frango Catupiry Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>filé de Frango</li>
 				<li>presunto</li>
@@ -404,11 +494,15 @@
 				<li>milho</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Calabresa</span>
+		<div class="detail">
+			<span class="title">x Calabresa</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -420,11 +514,15 @@
 				<li>milho</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Calabresa Bacon</span>
+		<div class="detail">
+			<span class="title">x Calabresa Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -437,11 +535,15 @@
 				<li>bacon</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Calabresa Egg</span>
+		<div class="detail">
+			<span class="title">x Calabresa Egg</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -454,11 +556,15 @@
 				<li>ovo</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Calabresa Catupiry</span>
+		<div class="detail">
+			<span class="title">x Calabresa Catupiry</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -471,11 +577,15 @@
 				<li>catupiry</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">x Tudo</span>
+		<div class="detail">
+			<span class="title">x Tudo</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -490,11 +600,15 @@
 				<li>calabresa</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">americano</span>
+		<div class="detail">
+			<span class="title">americano</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>hamburguer</li>
 				<li>presunto</li>
@@ -509,22 +623,30 @@
 				<li>calabresa</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">misto Quente</span>
+		<div class="detail">
+			<span class="title">misto Quente</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>presunto</li>
 				<li>mussarela</li>
 				<li>maionese</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">bauru de Presunto</span>
+		<div class="detail">
+			<span class="title">bauru de Presunto</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>presunto</li>
 				<li>mussarela</li>
@@ -532,11 +654,15 @@
 				<li>maionese</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">bauru de Carne</span>
+		<div class="detail">
+			<span class="title">bauru de Carne</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>carne</li>
 				<li>milho</li>
@@ -545,11 +671,15 @@
 				<li>tomate</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">bauru de Carne Bacon</span>
+		<div class="detail">
+			<span class="title">bauru de Carne Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>carne</li>
 				<li>milho</li>
@@ -559,11 +689,15 @@
 				<li>bacon</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">bauru de Carne Egg</span>
+		<div class="detail">
+			<span class="title">bauru de Carne Egg</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>carne</li>
 				<li>milho</li>
@@ -573,11 +707,15 @@
 				<li>ovo</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">Cachorro Quente Simples</span>
+		<div class="detail">
+			<span class="title">Cachorro Quente Simples</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>salsicha</li>
 				<li>tomate</li>
@@ -588,11 +726,15 @@
 				<li>batata Palha</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">Cachorro Quente Completo</span>
+		<div class="detail">
+			<span class="title">Cachorro Quente Completo</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>salsicha</li>
 				<li>tomate</li>
@@ -605,11 +747,15 @@
 				<li>calabresa</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">Cachorrão</span>
+		<div class="detail">
+			<span class="title">Cachorrão</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>pão de hamburguer</li>
 				<li>2 salsichas</li>
@@ -622,11 +768,15 @@
 				<li>batata palha</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">Cachorrão Bacon</span>
+		<div class="detail">
+			<span class="title">Cachorrão Bacon</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>pão de hamburguer</li>
 				<li>2 salsichas</li>
@@ -640,11 +790,15 @@
 				<li>bacon</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 	<li class="sandwich">
-		<div class="content"><span class="title">Cachorro Quente Especial</span>
+		<div class="detail">
+			<span class="title">Cachorro Quente Especial</span>
+			<span class="space"></span>
+			<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+		</div>
+		<div class="content">
 			<ul class="stuff">
 				<li>salsicha</li>
 				<li>hamburguer</li>
@@ -657,7 +811,6 @@
 				<li>batata Palha</li>
 			</ul>
 		</div>
-		<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 	</li>
 
 
