@@ -585,28 +585,28 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 2.25rem;
+	font-size: 2.25em;
 	/* 2.25x body copy size = 36px */
 	line-height: 1.25;
 	/* 45px / 36px */
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	/* 1.5x body copy size = 24px */
 	line-height: 1.15384615;
 	/* 30px / 26px */
 }
 
 h3 {
-	font-size: 1.3125rem;
+	font-size: 1.3125em;
 	/* 1.3125x body copy size = 21px */
 	line-height: 1.13636364;
 	/* 25px / 21px */
 }
 
 h4 {
-	font-size: 1.125rem;
+	font-size: 1.125em;
 	/* 1.125x body copy size = 18px */
 	line-height: 1.11111111;
 }
@@ -618,25 +618,25 @@ blockquote {
 	/* 25px / 20px */
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
 	body {
 		line-height: 1.375;
 	}
 
 	h1 {
-		font-size: 2.5rem;
+		font-size: 2.5em;
 		/* 2.5x body copy size = 40px */
 		line-height: 1.125;
 	}
 
 	h2 {
-		font-size: 2rem;
+		font-size: 2em;
 		/* 2x body copy size = 32px */
 		line-height: 1.25;
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		font-size: 1.5em;
 		/* 1.5x body copy size = 24px */
 		line-height: 1.25;
 	}
@@ -647,7 +647,7 @@ blockquote {
 	}
 
 	blockquote {
-		font-size: 1.5rem;
+		font-size: 1.5em;
 		/* 24px / 16px = */
 		line-height: 1.45833333;
 		/* 35px / 24px */
@@ -656,7 +656,7 @@ blockquote {
 
 @media (min-width: 60rem) {
 	h1 {
-		font-size: 4.5rem;
+		font-size: 4.5em;
 		/* 3x body copy size = 48px */
 		line-height: 1.25;
 		/* keep to a multiple of the 20px line height
@@ -664,13 +664,13 @@ blockquote {
 	}
 
 	h2 {
-		font-size: 2.25rem;
+		font-size: 2.25em;
 		/* 2.25x body copy size = 36px */
 		line-height: 1.25;
 	}
 
 	h3 {
-		font-size: 1.75rem;
+		font-size: 1.75em;
 		/* 1.75x body copy size = 28px */
 		line-height: 1.25;
 	}
