@@ -39,7 +39,7 @@
 	}
 
 	article h1 {
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 3em;
 		margin-left: 9pt;
 	}
@@ -858,6 +858,14 @@
 
 <div class="a4 font-blue-900">
 
+	<style>
+
+		.pizzas .item .title {
+			font-weight: 600;
+		}
+
+	</style>
+
 	<article class="menu pizzas justify-start">
 
 		<h1>Pizzas</h1>
@@ -893,6 +901,25 @@
 					<li>mussarela</li>
 					<li>tomate</li>
 					<li>milho</li>
+					<li>oregano</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="item pizza">
+			<div class="detail">
+				<span class="title">frango catupiry</span>
+				<span class="space"></span>
+				<div class="price"><span class="int">40</span><span class="decimal">00</span></div>
+				<div class="price"><span class="int">20</span><span class="decimal">00</span></div>
+			</div>
+			<div class="content">
+				<ul class="stuff">
+					<li>frango</li>
+					<li>catupiry</li>
+					<li>mussarela</li>
+					<li>palmito</li>
+					<li>azeitona</li>
 					<li>oregano</li>
 				</ul>
 			</div>
@@ -1046,25 +1073,6 @@
 
 		<section class="item pizza first-of-type">
 			<div class="detail">
-				<span class="title">frango catupiry</span>
-				<span class="space"></span>
-				<div class="price"><span class="int">40</span><span class="decimal">00</span></div>
-				<div class="price"><span class="int">20</span><span class="decimal">00</span></div>
-			</div>
-			<div class="content">
-				<ul class="stuff">
-					<li>frango</li>
-					<li>catupiry</li>
-					<li>mussarela</li>
-					<li>palmito</li>
-					<li>azeitona</li>
-					<li>oregano</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="item pizza first-of-type">
-			<div class="detail">
 				<span class="title">portuguesa</span>
 				<span class="space"></span>
 				<div class="price"><span class="int">43</span><span class="decimal">00</span></div>
@@ -1124,7 +1132,7 @@
 			</div>
 		</section>
 
-		<section class="item pizza first-of-type">
+		<section class="item pizza">
 			<div class="detail">
 				<span class="title">calabresa com cebola</span>
 				<span class="space"></span>
@@ -1177,54 +1185,54 @@
 
 		</style>
 
-		<section class="portions flex flex-wrap justify-center">
+		<section class="portions flex flex-wrap justify-start">
 
 			<section class="item portion first-of-type">
 				<div class="detail">
 					<span class="title">calabresa</span>
-					<div class="price"><span class="int">39</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">24</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
 			<section class="item portion first-of-type">
 				<div class="detail">
 					<span class="title">presunto</span>
-					<div class="price"><span class="int">39</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">14</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
 			<section class="item portion first-of-type">
 				<div class="detail">
 					<span class="title">batata</span>
-					<div class="price"><span class="int">39</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">18</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
-			<section class="item portion first-of-type">
+			<section class="item portion first-of-type"
 				<div class="detail">
 					<span class="title">mussarela</span>
-					<div class="price"><span class="int">39</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">14</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
-			<section class="item portion first-of-type">
+			<section class="item portion">
 				<div class="detail">
 					<span class="title">batata c/ queijo</span>
-					<div class="price"><span class="int">39</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">22</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
 			<section class="item portion first-of-type">
 				<div class="detail">
 					<span class="title">salame</span>
-					<div class="price"><span class="int">39</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">14</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
-			<section class="item portion first-of-type" style="width: 100%">
+			<section class="item portion first-of-type" style="width: 75%">
 				<div class="detail">
 					<span class="title">frango a passárinho</span>
-					<div class="price"><span class="int">39</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">30</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
@@ -1236,22 +1244,49 @@
 				width: 33.333333333%;
 			}
 
-			.item.juice {
-				width: 20%;
-				padding: 0 0 0 2pt;
+			.juices .prices {
+				margin: 4pt 0 10pt;
 			}
 
-			.item.portion {
+			.juices .prices .price {
 				width: 50%;
+				/*padding: 0 0 0 10pt;*/
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			.juices .prices .price:after {
+				display: none;
+			}
+
+			.juices .prices .price .title {
+				font-weight: 700;
+			}
+
+			.juices .prices .price .decimal:before {
+				content: ','
+			}
+
+			.juices .item:after {
+				border: none;
+			}
+
+			.juices .item.juice {
+				width: 25%;
 				padding: 0 0 0 10pt;
 			}
 
-			.item.portion .detail {
+			.juices .item.juice .title {
+				font-weight: 500;
+			}
+
+			.juices .item.portion .detail {
 				display: flex;
 				justify-content: space-between;
 			}
 
-			.item.portion:after {
+			.juices .item.portion:after {
 				content: '';
 				border-bottom: none;
 				border-bottom: dashed 1pt #1e88e5;
@@ -1260,7 +1295,7 @@
 				width: 18%;
 			}
 
-			.item.portion:last-child:after {
+			.juices .item.portion:last-child:after {
 				border-bottom: none;
 			}
 
@@ -1268,66 +1303,94 @@
 
 		<h1>Sucos</h1>
 
-		<section class="juices flex flex-wrap justify-start">
+		<!--
 
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">laranja</span>
-				</div>
+		Natural copo 5,50
+		Leite copo 6,50
+		Natural jarra 9,00
+		Leite jarra 10,50
+
+
+		-->
+
+		<section class="juices flex flex-column">
+
+			<section class="flex flex-wrap justify-center">
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">laranja</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">abacaxi</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">goiaba</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">morango</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">mamão</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">maracuja</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">acerola</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">manga</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">pêssego</span>
+					</div>
+				</section>
+
+				<section class="item juice first-of-type">
+					<div class="detail">
+						<span class="title">melão</span>
+					</div>
+				</section>
+
 			</section>
 
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">abacaxi</span>
-				</div>
-			</section>
+			<section class="prices flex flex-wrap">
 
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">goiaba</span>
-				</div>
-			</section>
+				<section class="item price first-of-type">
+					<span class="title">natural</span>
+					<div class="value"><span class="int">5</span><span class="decimal">50</span></div>
+				</section>
 
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">morango</span>
-				</div>
-			</section>
+				<section class="item price first-of-type">
+					<span class="title">c/ leite</span>
+					<div class="value"><span class="int">6</span><span class="decimal">50</span></div>
+				</section>
 
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">mamão</span>
-				</div>
-			</section>
-
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">maracuja</span>
-				</div>
-			</section>
-
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">acerola</span>
-				</div>
-			</section>
-
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">manga</span>
-				</div>
-			</section>
-
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">pêssego</span>
-				</div>
-			</section>
-
-			<section class="item juice first-of-type">
-				<div class="detail">
-					<span class="title">melão</span>
-				</div>
 			</section>
 
 		</section>
@@ -1339,20 +1402,26 @@
 			<section class="item caipirinha first-of-type">
 				<div class="detail">
 					<span class="title">pinga</span>
-					<div class="price"><span class="int">6</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">8</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
 			<section class="item caipirinha first-of-type">
 				<div class="detail">
 					<span class="title">vodka</span>
-					<div class="price"><span class="int">8</span><span class="decimal">00</span></div>
+					<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
 				</div>
 			</section>
 
 		</section>
 
 		<h1>Batidas</h1>
+
+		<!--
+
+		Batida 8,50
+
+		-->
 
 		<section class="mixes flex flex-wrap justify-start">
 
@@ -1383,6 +1452,16 @@
 		</section>
 
 		<h1>Doses</h1>
+
+		<!--
+
+
+		primeira fila 8
+
+		segunda fila 5
+
+
+		-->
 
 		<section class="doses flex flex-wrap justify-start">
 
@@ -1432,6 +1511,16 @@
 
 		<h1>Cervejas</h1>
 
+		<!--
+
+		Skol garrafa 9
+		Antarica garrafa 8
+
+		Skol lata 4
+		Antartica lata 4
+
+		-->
+
 		<section class="beers flex flex-wrap justify-start">
 
 			<section class="item beer first-of-type">
@@ -1472,6 +1561,46 @@
 		</section>
 
 		<h1>Refrigerantes</h1>
+
+		<!--
+
+		garrafa 300ml
+
+			sem preço
+
+		garrafa 600ml vidro
+
+			5 reias
+
+		garrafa 1 litro vidro
+
+			6 reais
+
+		descartavel 600ml
+
+			5 reais
+
+		descartavel 1 litro
+
+			7 reais
+
+		lata
+
+			3,50
+
+		coca 2 litros
+
+			9 reais
+
+		fanta 2 litros
+
+			8 reais
+
+		guarana
+
+			7,50 reais
+
+		-->
 
 		<section class="sodas flex flex-wrap justify-start">
 
